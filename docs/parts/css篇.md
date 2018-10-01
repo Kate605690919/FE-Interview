@@ -1,4 +1,4 @@
-### width、height、margin、padding、top百分比时相对于谁
+## width、height、margin、padding、top百分比时相对于谁
 
 width百分比时的规则同top、left等基本相同，absolute相对于非static，fixed相对于body。
 
@@ -12,7 +12,7 @@ margin和padding百分比均是相对于父元素的宽度
 
 top、left无论百分比还是数值，都是子元素的margin外边缘相对于父元素padding外边缘定位。（同时参照第一条规则，决定相对于的父元素）
 
-### 水平垂直居中
+## 水平垂直居中
 
 父元素：flex、align-items（垂直center）、justify-content（水平center（space-around、space-between））
 
@@ -20,7 +20,7 @@ top、left无论百分比还是数值，都是子元素的margin外边缘相对�
 
 父元素：text-align、子元素：line-height为父元素高度
 
-### BFC
+## BFC
 
 内部垂直margin折叠，外部margin相加，可以清楚浮动。
 
@@ -38,7 +38,7 @@ top、left无论百分比还是数值，都是子元素的margin外边缘相对�
 
 6.IE种也可以设置zoom为1（缩放）
 
-### 优先级
+## 优先级
 
 !important
 
@@ -52,7 +52,7 @@ class、属性、伪类     10
 
 通配、>、+         0
 
-### 行标签特点
+## 行标签特点
 
 高宽不起作用，左右margin无效。
 
@@ -62,11 +62,11 @@ class、属性、伪类     10
 
 inline和inline-block都会因为换行引起4px到8px的水平间隙，可以通过负的margin去掉（直接设置为-4px或者-8px，因为非bfc等margin会折叠）
 
-### margin折叠
+## margin折叠
 
 margin父子折叠、兄弟折叠
 
-### css3新特性
+## css3新特性
 
 css3选择器
 
@@ -76,7 +76,7 @@ Body > .mainTabContainer  div  > span[5]{}
 
 
 
-### 选择器优先级
+## 选择器优先级
 
 1，2，3优先级递增
 
@@ -87,9 +87,9 @@ Body > .mainTabContainer  div  > span[5]{}
 
 注意：通用选择器（*），子选择器（>）和相邻同胞选择器（+）并不在这四个等级中，所以他们的权值都为0。
 
-### 测试题
+## 测试题
 
-### **行标签**都有哪些？有什么特点？
+## **行标签**都有哪些？有什么特点？
 
 span,a,img,button,
 
@@ -99,17 +99,17 @@ span,a,img,button,
 
 img元素是**可替换内联元素**，可替换就是浏览器根据元素的标签和属性，来决定元素的具体显示形式，img、input、textarea、select、object都是替换元素，替换元素一般有内在尺寸，所以具有width/height，可以设定，当不指定img的width和height的时候，就按照其内在尺寸显示，也就是图片被保存的时候的宽度和高度
 
-### href、src差别
+## href、src差别
 
 href和src是有区别的，而且是不能相互替换的。我们在可替换的元素上使用src，然而把href用于在涉及的文档和外部资源之间建立一个关系。
 
-### 可替换元素和不可替换元素
+## 可替换元素和不可替换元素
 
 - 替换元素：浏览器根据元素的标签和属性，决定具体显示的内容。
 
 比如根据img的src来显示，input根据type来显示不同的输入框。如果查看html代码，看不到实际的内容。
 
-<img>、<input>、<textarea>、<select>、<object>都是替换元素。这些元素往往没有实际的内容，即是一个空元素。
+`<img>`、`<input>`、`<textarea>`、`<select>`、`<object>`都是替换元素。这些元素往往没有实际的内容，即是一个空元素。
 
 - 不可替换元素：(X)HTML 的大多数元素是不可替换元素，即其内容直接表现给用户端（例如浏览器）。
 
@@ -119,7 +119,7 @@ href和src是有区别的，而且是不能相互替换的。我们在可替换�
 
 
 
-### 按块级元素和行内元素来分类。
+## 按块级元素和行内元素来分类。
 
 - 块级元素：默认在横向充满其父元素的内容区域，而且在其左右两边没有其他元素，即块级元素默认是独占一行的。
 - 行内元素：不形成新内容块，即在其左右可以有其他元素，通过设置float、overflow：hidden等等可以形成块级格式化上下文。
@@ -128,7 +128,7 @@ href和src是有区别的，而且是不能相互替换的。我们在可替换�
 
 
 
-### float和display：inline-block
+## float和display：inline-block
 
 都可以设置高宽。
 
@@ -156,7 +156,7 @@ inline和inline-block的元素之间经常会有空白符引起4px的间隔。
 
 会显示出 123 4。
 
-### 清除浮动的方式
+## 清除浮动的方式
 
 - 浮动元素后面加空div标签 clear:both ；（div沾满一行，默认在浮动块的下面，空div高度为0，所以可以撑开父元素的高度）
 
@@ -182,7 +182,7 @@ inline和inline-block的元素之间经常会有空白符引起4px的间隔。
 
 - 创建BFC。
 
-### 用css实现一个自适应正方形容器
+## 用css实现一个自适应正方形容器
 
 1. ​
 
@@ -215,7 +215,7 @@ margin、padding设置为百分数时，是**父元素的宽度**决定的。再
 
 **PS：**顺带一提，background的有效范围（border以内，包括border，因为border颜色设置为transparent时，还是background设置的颜色）。
 
-### margin-college
+## margin-college
 
 包括父子折叠和兄弟折叠，都是垂直方向上的折叠。
 
@@ -246,13 +246,13 @@ margin、padding设置为百分数时，是**父元素的宽度**决定的。再
 - body根元素
 - display为非块级（block）的块容器（比如flex、inline-block、table-cell等等）
 
-### :nth-of-type(*n*) 
+## :nth-of-type(*n*) 
 
 选择器匹配属于父元素的特定类型的第 n 个子元素的每个元素.
 
 
 
-### 单行文本溢出显示 ...
+## 单行文本溢出显示 ...
 
 ```css
 overflow: hidden;
@@ -261,7 +261,7 @@ white-space: nowrap;
 width: 20px; 
 ```
 
-### 多行文本溢出显示 ...
+## 多行文本溢出显示 ...
 
 ```css
 display: -webkit-box;
@@ -276,14 +276,14 @@ display: -webkit-box; 必须结合的属性 ，将对象作为弹性伸缩盒子
 
 -webkit-box-orient 必须结合的属性 ，设置或检索伸缩盒对象的子元素的排列方式 。
 
-### flex
+## flex
 
 ```css
 justify-content：center，space-between，space-around; /*水平居中*/
 align-items：center; /*垂直居中*/
 ```
 
-### animation
+## animation
 
 ```css
 @-webkit-keyframes anim1 { 
@@ -310,7 +310,7 @@ ease-out: fast/abrupt at the beginning, slow at the end*/
 
 ## 布局
 
-### 居中
+## 居中
 
 1.  绝对定位
 
@@ -333,7 +333,7 @@ justify-content: center
 
 4. display：table-cell+text-align: center
 
-### 两栏式布局
+## 两栏式布局
 
 ```css
 // float
@@ -402,7 +402,7 @@ justify-content: center
 <div id="footer"></div>
 ```
 
-### 页脚自适应
+## 页脚自适应
 
 父级设置min-height 100vh，flex-direction：column，中间内容设置flex-grow为1。
 

@@ -9,16 +9,40 @@
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
 </head>
 <body>
+  <nav>
+    <a href="#/">作者：胸大有脑颜值高的李蒙昭，刘春柳</a>
+  </nav>
   <div id="app">加载中...</div>
   <script>
     window.$docsify = {
       name: '',
-      repo: 'https://github.com/BetaSu/doc-demo',
+      repo: 'https://github.com/Kate605690919/FE-Interview',
       loadSidebar: true,
-      subMaxLevel: 3,
-      coverpage: true
+      subMaxLevel: 2,
+      coverpage: true,
+      search: {
+        maxAge: 86400000, // Expiration time, the default one day
+        paths: 'auto', // or 'auto'
+        placeholder: 'Type to search',
+
+        // Localization
+        placeholder: {
+          '/': '搜索'
+        },
+
+        noData: '找不到结果!',
+
+        // Localization
+        noData: {
+          '/': 'No Results'
+        },
+
+        // Headline depth, 1 - 6
+        depth: 6
+      }
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
 </body>
 </html>

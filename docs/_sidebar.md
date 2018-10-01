@@ -1,4 +1,3 @@
-* [前端知识点](/README.md)
 * [js篇](parts/js篇.md)
 * [css篇](parts/css篇.md)
 * [html篇](parts/html篇.md)

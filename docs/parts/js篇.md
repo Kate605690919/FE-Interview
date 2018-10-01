@@ -1,6 +1,4 @@
-## JS篇
-
-### js动画和css3动画
+## js动画和css3动画
 
 **JS动画**
 
@@ -60,7 +58,7 @@
 
  如果动画只是简单的状态切换，不需要中间过程控制，在这种情况下，css动画是优选方案。它可以让你将动画逻辑放在样式文件里面，而不会让你的页面充斥 Javascript 库。然而如果你在设计很复杂的富客户端界面或者在开发一个有着复杂UI状态的 APP。那么你应该使用js动画，这样你的动画可以保持高效，并且你的工作流也更可控。所以，在实现一些小的交互动效的时候，就多考虑考虑CSS动画。对于一些复杂控制的动画，使用javascript比较可靠。
 
-### async与generator
+## async与generator
 
 generator语法糖，*替换成async，yield替换成await。
 
@@ -126,7 +124,7 @@ function spawn(genF) {
 }
 ```
 
-### Object.create和new
+## Object.create和new
 
 首先了解下Object.create的实现方式
 
@@ -147,7 +145,7 @@ new操作符会做一下几个事情：
 
 其中被new的函数就叫构造函数。
 
-### 点击穿透
+## 点击穿透
 
 由于移动端双击缩放或者双击滚动，导致存在300ms点击延时。
 
@@ -170,7 +168,7 @@ click从上手触摸开始、且手指没有在屏幕上移动（满足某个位
 
 
 
-### 模拟元素拖拽
+## 模拟元素拖拽
 
 ```js
             class Drag {
@@ -220,7 +218,7 @@ click从上手触摸开始、且手指没有在屏幕上移动（满足某个位
         let drag = new Drag('#drag')
         drag.init()
 ```
-### 深拷贝和浅拷贝（对象和数组）
+## 深拷贝和浅拷贝（对象和数组）
 
 数组浅拷贝：直接赋值，slice()或slice(0)，concat()，for遍历（单纯的for...）,Object.assign()(两参数时，因为如果多参数的话，后面的会覆盖前面的，因为都是同样的key值).
 
@@ -249,13 +247,13 @@ function deepCopy(des, src) {
 }
 ```
 
-### 递归的优化（尾递归：减少内存空间）
+## 递归的优化（尾递归：减少内存空间）
 
 尾递归的标准是，函数运行到最后一步调用自身（而不是在最后一行调用自身），这样的话，不用再保存外层函数的信息，避免了栈溢出的风险。
 
 将递归改成迭代，相当于循环代码的执行效率。
 
-### 递归的优化（记忆）（看一下你不知道的js的递归那一块）
+## 递归的优化（记忆）（看一下你不知道的js的递归那一块）
 
 就是每进行一次递归，都把上一次递归结果缓存到一个数组中，下一次递归可以直接调用这个数组的值，减少寄存器的调用。
 
@@ -263,7 +261,7 @@ function deepCopy(des, src) {
 
 各种高宽
 
-### 一.js获取页面各种距离（空）
+## 一.js获取页面各种距离（空）
 
 ![](https://images.cnblogs.com/cnblogs_com/52linux/437309/o_client-offset-scroll.jpg)
 
@@ -525,7 +523,7 @@ var scrollTop = document.documentElement.scrollTop || window.pageYOffset || docu
 
 ```
 
-### 二.js获取页面坐标数据（空）
+## 二.js获取页面坐标数据（空）
 
 **1.client系列**
 
@@ -570,7 +568,7 @@ document.onclick = function(e){
     }
 ```
 
-### js面向对象编程
+## js面向对象编程
 
 一般具有继承、封装、多态，模块化。但是js有些不太一样的地方。
 
@@ -588,7 +586,7 @@ document.onclick = function(e){
 
 封装，类中，不需要知道某方法具体如何实现的，就可以使用这种方法。
 
-###         作用域与执行环境
+##         作用域与执行环境
 
 执行环境定义了变量或函数是否有权访问其他数据，决定了他们各自的行为。
 
@@ -608,7 +606,7 @@ document.onclick = function(e){
 
 ES5只有函数作用域和全局作用域，ES6还有块级作用区域。
 
-### 事件流
+## 事件流
 
 **事件冒泡**
 
@@ -724,7 +722,7 @@ addEventListener(type, listener[, options ])
 
 同add......大致相同，但是值得注意的是，add时是捕获还是冒泡 ，则remove时需和add时相同，因为监听器注册的阶段不同。
 
-### 数据类型
+## 数据类型
 
 **5种基本数据类型**
 
@@ -736,7 +734,7 @@ Object（按引用传递，但是函数中传参只能是按值，其实就是�
 
 按值传递是说，实际上函数中是创建了一个局部变量，指向了外部作用域中obj的地址，但是改变这个变量的值切断与那个地址之间的联系，外部的obj不会变。在函数内部重写obj时（不是说对指向的那个地址里的值进行修改），这个变量引用的就是一个局部对象了，会在函数执行完后销毁。
 
-### new 和 Object.create
+## new 和 Object.create
 
 首先了解下Object.create的实现方式
 
@@ -760,7 +758,7 @@ new操作符会做一下几个事情：
 
 其中被new的函数就叫构造函数。
 
-### 变量声明 var let const
+## 变量声明 var let const
 
 **1. var**
 
@@ -828,9 +826,9 @@ console.log(obj); // {a: 3}
 - ES6 const 的其他行为和 let 一样。
 - ES6中，const、let、class命令声明的全局变量，不再属于window的属性，从ES6开始，全局变量逐步与顶层对象的属性脱钩。
 
-### 函数
+## 函数
 
-### this指向
+## this指向
 
 通常是由函数求值时的调用者决定的。
 
@@ -838,7 +836,7 @@ console.log(obj); // {a: 3}
 
 当然这是说不用call、apply、bind时的情况。
 
-### call、bind、apply
+## call、bind、apply
 
 func.call(thisObj，arg1，arg2...)、func.apply(thisObj，[obj1,obj2...])
 
@@ -868,7 +866,7 @@ bind第一个参数为null，表示不改变函数this指向，这么写可以�
 
 如果全部参数传进去，则可以实现延时调用的效果，比如setTimeout就可以先将参数传进去。
 
-### ajax
+## ajax
 
 原理：
 
@@ -1059,7 +1057,7 @@ xhr.onprogress = function(event){
 
 
 
-### Promise和Async
+## Promise和Async
 
 写一个返回promise对象的函数a。
 
@@ -1264,7 +1262,7 @@ function Promise(fn) {
 1. 通过Promise.prototype.then和Promise.prototype.catch方法将观察者方法注册到被观察者Promise对象中，同时返回一个新的Promise对象，以便可以链式调用。
 2. 被观察者管理内部pending、fulfilled和rejected的状态转变，同时通过构造函数中传递的resolve和reject方法以主动触发状态转变和通知观察者。
 
-### promise.all()和Promise.race()
+## promise.all()和Promise.race()
 
 **promise.all()** 
 
@@ -1297,7 +1295,7 @@ Promise.race([p1, p2]).then(function (result) {
 
 
 
-### 字符串API
+## 字符串API
 
 charAt(num) // 得到指定索引位置的单字符
 
@@ -1321,7 +1319,7 @@ slice/substr/substring都不改变原数组，第一个参数指定子字符串�
 
 trim（）删除前缀和后面的空格，不改变原字符串。
 
-### 数组API
+## 数组API
 
 **length (改变原数组)**
 
@@ -1459,13 +1457,13 @@ function compare(val1, val2) {
 
 
 
-### 数组转化字符串(不改变原数组)
+## 数组转化字符串(不改变原数组)
 
 1. `var str = String(str)` 。
 2. `var str = arr.join('自定义分隔符')` 。
 3. 默认用逗号连接的话，还可以使用toString和toLocaleString。
 
-### 连接子数组（不改变原数组）
+## 连接子数组（不改变原数组）
 
 1. `var newArr = arr.concat(arg1, arg2, arr2, ...)`（可以是元素也可以是数组）
 
@@ -1496,9 +1494,9 @@ console.log(arr1); // [2,3,4,5]
 
 要注意的一点，Object.assign会改变源对象。
 
-### 正则（空）
+## 正则（空）
 
-### js语言特性
+## js语言特性
 
 **高阶函数**
 
@@ -1580,7 +1578,7 @@ jQuery.fn.init.prototype = jQuery.prototype= jQuery.fn;
 
 比如attr一个参数是get，两个参数是set，$(...)内部有9种重载场景。
 
-### 排序算法比较表格
+## 排序算法比较表格
 
 | 排序算法     | 平均时间复杂度   | 最坏时间复杂度   | 空间复杂度         | 是否稳定 |
 | ------------ | ---------------- | ---------------- | ------------------ | -------- |
@@ -1594,7 +1592,7 @@ jQuery.fn.init.prototype = jQuery.prototype= jQuery.fn;
 | 计数排序     | O(n+k)O(n+k)     | O(n+k)O(n+k)     | O(n+k)O(n+k)       | 是       |
 | 基数排序     | O(N∗M)O(N∗M)     | O(N∗M)O(N∗M)     | O(M)O(M)           | 是       |
 
-### 快排 *O(*nlog2n)
+## 快排 *O(*nlog2n)
 
 大致分三步：
 
@@ -1631,7 +1629,7 @@ function quickSort(arr){
 
 
 
-### 去重
+## 去重
 
 
 
@@ -1639,4 +1637,4 @@ function quickSort(arr){
 
 map
 
-### 两数和（空）
+## 两数和（空）
